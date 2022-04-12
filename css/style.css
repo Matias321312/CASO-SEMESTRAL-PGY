@@ -1,0 +1,341 @@
+@import url(carrito.css);
+@import url(registrar.css);
+@import url(login.css);
+
+.nav-link:hover {
+    background-color: grey;
+    color: white;
+} 
+
+.nav-link {
+    color: white;
+} 
+
+.nav-link:hover .fa {
+    transition: all 1s;
+    transform: rotate(360deg);
+    font-size: 20px;
+}
+
+.activo {
+    background-color: grey !important
+}
+
+
+
+body {
+    font-family: arial;
+}
+
+nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* HEADER */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 100px;
+    color: white;
+}
+
+header nav {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+header nav li {
+    margin: 0 15px;
+    color: black;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:1000px) {
+    header {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+    header nav {
+        margin-top: 10px;
+    }
+    header .logo img {
+        width: 90%;
+    }
+    header nav li a {
+        font-size: 15px;
+    }
+}
+
+/* BANNER */
+section {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px
+}
+
+@media (max-width:1000px) {
+    section {
+        padding: 100px 50px;
+    }
+}
+
+@media (max-width:600px) {
+    section {
+        padding: 130px 30px;
+    }
+}
+
+.banner {
+    position: relative;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    min-height: 80vh;
+}
+
+.banner .banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('../img/asesoramiento-en-jardineria-1.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.banner .banner-img::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    content: '';
+}
+
+.banner h1 {
+    margin-top: 10%;
+    margin-bottom: 10px;
+    font-size: 65px;
+}
+
+.banner h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.banner a.banner-btn {
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: crimson;
+}
+
+@media (max-width:800px) {
+    .banner {
+        min-height: 600px;
+    }
+
+    .banner h1 {
+        font-size: 25px;
+    }
+    
+    .banner h2 {
+        font-size: 20px;
+    }
+    
+    .banner a.banner-btn {
+        font-size: 15px;
+        padding: 15px 30px;
+    }
+}
+
+
+.carousel{
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+#producto {
+    background: rgb(207, 204, 204);
+}
+
+.producto-contenido {
+    
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.producto-contenido li {
+    padding: 0 30px;
+    flex-basis: 33%;
+    text-align: center;
+}
+
+.producto-contenido li i {
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: rgb(155, 11, 11);
+}
+
+.producto-contenido li h4 {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.producto-titulo {
+    margin-bottom: 4%;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+@media (max-width:1000px) {
+    .producto-contenido li {
+        flex-basis: 100%;
+        margin-bottom: 60px;
+    }
+
+    .producto-titulo {
+        font-size: 40px;
+        margin-bottom: 8%;
+    }
+}
+
+
+.donaciones-contenido {
+    
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.donaciones-titulo {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.donaciones-contenido li {
+    padding: 20px;
+    height: 300px;
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+
+
+.donaciones-izq {
+    flex-basis: 40%;
+    background-image: url('../img/descarga3221.png');
+   
+}
+
+.donaciones-der {
+    flex-basis: 60%;
+}
+
+.donaciones-contenido p {
+    margin-bottom: 35px;
+    text-align: justify;
+    padding-left: 0;
+}
+
+.donaciones-contenido h2 {
+    margin-top: 20px;
+    margin-bottom: 2%;
+}
+
+.donaciones-btn {
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: crimson;
+}
+
+@media (max-width:1000px) {
+    .donaciones-izq, .donaciones-der {
+        flex-basis: 100%;
+    }
+
+    .donaciones-contenido p {
+        text-align: justify;
+    }
+
+    .donaciones-contenido li {
+        padding: 8px;
+    }
+
+    .donaciones-der {
+        text-align: center;
+    }
+}
+
+
+footer {
+    
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 60px 0;
+}
